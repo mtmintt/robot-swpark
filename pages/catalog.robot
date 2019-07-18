@@ -1,0 +1,14 @@
+*** Settings ***
+Library  SeleniumLibrary
+
+*** Variables ***
+${URL}  http://automationpractice.com/
+${BROWSER}  gc
+
+*** Keywords *** 
+#แยก kw ออกเป็นทีละหน้า (หน้าแรก)
+Open
+   Open Browser ${URL} browser=${BROWSER}
+Choose summer dresses
+   Click Element  xpath://*[@id="categories_block_left"]/div/ul/li[3]/a
+   
